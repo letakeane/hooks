@@ -1,6 +1,7 @@
 const expect = require('chai').expect;
 const add2 = require('../index.js').add2;
 const add3 = require('../index.js').add3;
+const add15 = require('../index.js').add15;
 
 describe('add2 function', () => {
   it('should add 2 to a positive number', () => {
@@ -29,6 +30,22 @@ describe('add3 function', () => {
   it('should add 3 to a negative number', () => {
     const actual = add3(-1);
     const expected = 2;
+
+    expect(actual).to.equal(expected);
+  })
+})
+
+describe('add15 function', () => {
+  it('should add 15 to a positive number', () => {
+    const actual = add15(7);
+    const expected = 22;
+
+    expect(actual).to.equal(expected);
+  })
+
+  it('should add 15 to a negative number', () => {
+    const actual = add15(-10);
+    const expected = 5;
 
     expect(actual).to.equal(expected);
   })
